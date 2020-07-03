@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>W3D5 - Eindopdracht: To Do</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>To DO or not to DO, that's the question?</h1>
+    <div id="container-total">
+      <div id="input-to-do-container">
+        <form>
+          <label for="new-task">Nieuwe To Do </label>
+          <input id="new-task" type="text" placeholder="Nieuwe taak" />
+          <button id="input-button" type="button">Voeg toe</button>
+        </form>
+      </div>
+      <div id="task-overview">
+        <h3>To Do:</h3>
+        <ul id="tasks-UL"></ul>
+      </div>
+    </div>
+    <script src="api-client.js"></script>
+    <script defer src="script.js"></script>
+  </body>
+</html>

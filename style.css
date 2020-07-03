@@ -1,0 +1,85 @@
+h1 {
+  text-align: center;
+  color: rgb(202, 202, 202);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  color: rgb(202, 202, 202);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+}
+
+#container-total {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+#input-to-do-container {
+  grid-column: 2 / 3;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+#task-overview {
+  grid-column: 2 / 3;
+  background-color: rgb(75, 59, 167);
+  background-image: linear-gradient(
+    180deg,
+    rgb(75, 59, 167),
+    rgb(202, 202, 202)
+  );
+  height: 500px;
+  padding: 17px;
+  border: solid 1px;
+  border-radius: 5%;
+}
+
+ul li {
+  font-family: "Courier New", Courier, monospace;
+  list-style: none;
+  list-style: none;
+  min-height: 20px;
+  background-color: rgb(228, 221, 250);
+  border-radius: 25px;
+  padding-top: 1px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  color: rgb(23, 35, 36);
+}
+
+ul li:hover {
+  font-weight: bold;
+}
+
+button {
+  align-content: flex-end;
+  float: right;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul li img {
+  height: 15px;
+}
+
+label {
+  margin-top: 8px;
+  margin-right: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
