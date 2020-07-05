@@ -32,3 +32,11 @@ const postToDo = async (todo) => {
     .then((result) => console.log(result))
     .catch((error) => console.log("error", error));
 };
+
+//DELETE method om todo te verwijderen
+const deleteTodo = async (id) => {
+  const endPointDelete = `https://wincacademydatabase.firebaseio.com/jonathan/tasks/${id}.json`;
+  await fetch(endPointDelete, {
+    method: "delete",
+  });
+};

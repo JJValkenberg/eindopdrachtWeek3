@@ -25,15 +25,15 @@ const createToDos = (description, id) => {
   let completeButton = document.createElement("button");
   let completeImg = document.createElement("img");
   completeImg.src = "check.png";
-  completeButton.classList.add = "complete-button";
+  completeButton.classList.add("complete-button");
   newTodo.appendChild(completeButton);
   completeButton.appendChild(completeImg);
   //delete button
-  const deleteButton = document.createElement("button");
+  let deleteButton = document.createElement("button");
   deleteButton.id = id;
   let deleteImg = document.createElement("img");
   deleteImg.src = "trash.png";
-  deleteButton.classList.add = "delete-button";
+  deleteButton.classList.add("delete-button");
   newDiv.appendChild(deleteButton);
   newTodo.appendChild(deleteButton);
   deleteButton.appendChild(deleteImg);
@@ -51,5 +51,22 @@ const setToDo = async () => {
 //calling function to set ToDo's
 setToDo();
 
-//Event listener for new ToDo
+//Eventlistener for new ToDo
 taskButton.addEventListener("click", addToDo);
+
+//Delete a ToDo
+const deleteCheck = (e) => {
+  console.log(e.target);
+  const item = e.target;
+  if (item.classList[0] === "delete-button") {
+    const todo = item.parentElement;
+    todo.remove();
+    deleteTodo(item.id);
+  }
+  if (item.classList[0] === "complete-button") {
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
+  }
+};
+//Eventlistener delete to do
+taskList.addEventListener("click", deleteCheck);

@@ -71,15 +71,24 @@ button {
   float: right;
   background: none;
   border: none;
-  cursor: pointer;
 }
 
 ul li img {
   height: 15px;
+  pointer-events: none;
 }
 
 label {
   margin-top: 8px;
   margin-right: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+#input-button {
+  font-weight: bold;
+  background: rgb(202, 202, 202);
+  border: 1px;
 }
